@@ -1,0 +1,115 @@
+/* Main page container */
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    padding: 20px 0;
+    box-sizing: border-box;
+    position: relative; /* Allow child elements to be positioned with absolute */
+  }
+  
+  /* Centering the headings at the top */
+  .header {
+    position: absolute;
+    top: 20px; /* Fix the headings near the top */
+    text-align: center;
+    width: 100%;
+  }
+  
+  h1, h3 {
+    font-family: Arial, sans-serif;
+    margin: 5px 0; /* Small margin between headings */
+  }
+  
+  /* Magic 8 Ball Circle and Form */
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* Center everything vertically */
+    height: 100%; /* Take up the remaining space below the headings */
+  }
+  
+  /* Magic 8 Ball Circle */
+  .circle {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    background-color: black;
+    border-radius: 50%;
+    margin: 0 auto;
+  
+    /* Adding radial gradient for more realistic shading */
+    background: radial-gradient(circle at top left, #111, #000);
+    
+    /* Centering Circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  /* Blue Triangle */
+  .triangle {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 120px solid transparent;
+    border-right: 120px solid transparent;
+    border-top: 160px solid #007bff; /* A smaller blue triangle */
+    
+    /* Triangle positioning inside the ball */
+    top: -10px;
+  }
+  
+  /* Fortune Text */
+  #fortuneText {
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    top: 43%; /* Adjust position to overlay over the triangle */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    line-height: 1.5;
+  }
+  
+  /* Glossy shine effect */
+  .circle:before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle at top left, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0));
+    border-radius: 50%;
+    opacity: 0.6;
+  }
+  
+  /* Form and Button Below the Magic 8 Ball */
+  input, button {
+    font-family: Arial, sans-serif;
+    display: block;
+    margin: 15px auto; /* Reduce margin to tighten spacing */
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  input {
+    width: 500px;
+    height: 30px;
+    margin-top: 150px;
+    text-align: center;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  ::placeholder {
+    text-align: center;
+  }
